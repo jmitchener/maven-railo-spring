@@ -36,6 +36,41 @@
 		<url-pattern>/spring/*</url-pattern>
 	</servlet-mapping>
 
-
+	<servlet>
+		<servlet-name>CFMLServlet</servlet-name>
+		<servlet-class>railo.loader.servlet.CFMLServlet</servlet-class>
+		
+		<init-param>
+			<description>Railo Web Directory directory</description>
+			<param-name>railo-web-directory</param-name>
+			<param-value>{web-root-directory}/WEB-INF/railo/</param-value>
+			<!-- <param-value>c:/webconfig/{web-context-hash}/susi/</param-value> -->
+		</init-param>
+		<init-param>
+			<description>directory where railo root directory is stored</description>
+			<param-name>railo-server-directory</param-name>
+			<param-value>./</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>CFMLServlet</servlet-name>
+	    <url-pattern>/index.cfm/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>CFMLServlet</servlet-name>
+	    <url-pattern>*.cfm</url-pattern>
+	</servlet-mapping>
+	 
+	<servlet-mapping>
+	    <servlet-name>CFMLServlet</servlet-name>
+	    <url-pattern>*.cfml</url-pattern>
+	</servlet-mapping>
+	 
+	<servlet-mapping>
+	    <servlet-name>CFMLServlet</servlet-name>
+	    <url-pattern>*.cfc</url-pattern>
+	</servlet-mapping>
 
 </web-app>

@@ -5,9 +5,12 @@
 	<title>Home</title>
 </head>
 <body>
-<h1> 
-	Hello world!
+<h1>
+	Hello world! - 
 </h1>
-${controllerMessage}
+${controllerMessage}<br/>
+<br/>
+<br/>
+<a href="person/list">Go to the person list</a>
 </body>
 </html>
